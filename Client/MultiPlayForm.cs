@@ -112,7 +112,7 @@ namespace Client
             paintCoord(x, y, nowPlayer);
 
             // 놓은 바둑돌의 위치 보내기
-            SendMessage(label("Put") + roomID + "," + x + "," + y);
+            SendMessage(label("Put") + x + "," + y);
 
             if (judge(nowPlayer))
             {
@@ -262,7 +262,7 @@ namespace Client
             playing = true;
 
             // 서버로 메세지 보내기
-            SendMessage(label("Play") + roomID + "]");
+            SendMessage(label("Play"));
 
             this.status.Text = "상대 플레이어의 준비를 기다립니다.";
             this.playButton.Enabled = false;
